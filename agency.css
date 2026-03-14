@@ -24,7 +24,7 @@ html {
 }
 
 /* =========================================
-   CSS Variables (Theming)
+   CSS Variables(Theming)
    ========================================= */
 
 /* Original colors and fonts */
@@ -101,7 +101,6 @@ body {
   -webkit-background-clip: unset;
   background-clip: unset;
 }
-
 .navbar {
   max-width: 1180px;
   margin: 0 auto;
