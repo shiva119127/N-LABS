@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<title>NirmanLabs – Hackathon Presentation Script</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&family=JetBrains+Mono:wght@400;600&display=swap');
+  :root {
+    --blue: #1e90ff; --orange: #ff7a00; --green: #00ffb3;
+    --bg: #0b0d15; --card: #0f1220; --text: #e8eaf6; --muted: #7a8098;
+    --border: rgba(255,255,255,0.07);
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: var(--bg); color: var(--text); font-family: 'Sora', sans-serif;
+    max-width: 860px; margin: 0 auto; padding: 48px 32px 80px; line-height: 1.7; }
+
+  h1 { font-size: 2rem; font-weight: 700; color: #fff; margin-bottom: 4px; }
+  .subtitle { color: var(--muted); font-size: 14px; margin-bottom: 48px; }
+
+  .section { margin-bottom: 40px; border-left: 3px solid var(--blue);
+    padding: 28px 28px 28px 32px; background: var(--card);
+    border-radius: 0 14px 14px 0; position: relative; }
+  .section.orange { border-color: var(--orange); }
+  .section.green  { border-color: var(--green);  }
+  .section.purple { border-color: #a259ff; }
+
+  .tag { display: inline-block; font-family: 'JetBrains Mono', monospace;
+    font-size: 11px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase;
+    padding: 3px 10px; border-radius: 99px; margin-bottom: 10px; }
+  .tag.blue   { background: rgba(30,144,255,0.15); color: var(--blue); }
+  .tag.orange { background: rgba(255,122,0,0.15);  color: var(--orange); }
+  .tag.green  { background: rgba(0,255,179,0.12);  color: var(--green); }
+  .tag.purple { background: rgba(162,89,255,0.15); color: #a259ff; }
+
+  h2 { font-size: 1.2rem; font-weight: 700; color: #fff; margin-bottom: 12px; }
+
+  .script-text { font-size: 16px; color: rgba(255,255,255,0.88); line-height: 1.85; }
+  .script-text strong { color: #fff; }
+  .script-text em { color: var(--blue); font-style: normal; font-weight: 600; }
+
+  .note { font-size: 13px; color: var(--muted); margin-top: 12px;
+    padding: 10px 14px; background: rgba(255,255,255,0.03);
+    border-radius: 8px; border: 1px solid var(--border); }
+  .note b { color: var(--orange); }
+
+  .feature-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 16px; }
+  .feature-item { background: rgba(255,255,255,0.03); border: 1px solid var(--border);
+    border-radius: 10px; padding: 14px 16px; }
+  .feature-item .fi-title { font-size: 13px; font-weight: 600; color: #fff; margin-bottom: 4px; }
+  .feature-item .fi-desc  { font-size: 12px; color: var(--muted); line-height: 1.5; }
+  .fi-num { font-family: 'JetBrains Mono', monospace; font-size: 11px;
+    color: var(--blue); margin-right: 6px; }
+
+  .divider { border: none; border-top: 1px solid var(--border); margin: 48px 0; }
+
+  .timing { font-family: 'JetBrains Mono', monospace; font-size: 12px;
+    color: var(--muted); float: right; margin-top: -2px; }
+
+  @media print {
+    body { background: white; color: #111; max-width: 100%; padding: 20px; }
+    .section { background: #f8f8f8; border-radius: 0; }
+    .tag.blue   { background: #dbeafe; color: #1d4ed8; }
+    .tag.orange { background: #fef3c7; color: #92400e; }
+    .script-text { color: #222; }
+    .note { background: #f0f0f0; color: #555; }
+    .feature-item { background: #f4f4f4; }
+    h1, h2 { color: #111; }
+  }
+</style>
+</head>
+<body>
+
+<h1>NirmanLabs · Hackathon Presentation Script</h1>
+<p class="subtitle">3-minute pitch · Read this aloud · Sections are color-coded by speaker / topic</p>
+
+<hr class="divider"/>
+
+<!-- INTRO -->
+<div class="section">
+  <span class="tag blue">Opening · 0:00 – 0:30</span>
+  <h2>Hook & Introduction <span class="timing">~30 sec</span></h2>
+  <p class="script-text">
+    "Hey everyone — we're <strong>Team NirmanLabs</strong>, and what you're looking at right now is 
+    a fully-interactive, <em>3D-powered agency landing page</em> that we built from scratch in this hackathon.<br/><br/>
+    Not a template. Not a drag-and-drop builder. 
+    <strong>Custom HTML, CSS, JavaScript, and a Three.js 3D canvas</strong> — all working together in real-time."
+  </p>
+  <p class="note"><b>Tip:</b> While saying this, scroll slowly down the page so judges see the 3D background moving.</p>
+</div>
+
+<!-- PROBLEM -->
+<div class="section orange">
+  <span class="tag orange">Problem · 0:30 – 1:00</span>
+  <h2>What Problem Does This Solve? <span class="timing">~30 sec</span></h2>
+  <p class="script-text">
+    "Most agency websites are <strong>boring and forgettable</strong>. They use the same templates, 
+    the same stock photos, and the same layout everyone else has.<br/><br/>
+    We asked: <em>what if a website itself was the product demo?</em> What if the 
+    moment someone lands on your page, they immediately feel that you build premium, 
+    cutting-edge software?"
+  </p>
+</div>
+
+<!-- SOLUTION / DEMO -->
+<div class="section green">
+  <span class="tag green">Solution & Live Demo · 1:00 – 2:00</span>
+  <h2>Here's How We Built It <span class="timing">~60 sec</span></h2>
+  <p class="script-text">
+    "Our project has <strong>three layers</strong> that each one of us owns:"
+  </p>
+
+  <div class="feature-grid" style="margin-top:16px;">
+    <div class="feature-item">
+      <div class="fi-title">🎨 Frontend (HTML + CSS)</div>
+      <div class="fi-desc">Dark glassmorphism design, CSS variables for theming, 
+        responsive grid, scroll reveal animations, and a brand-new <strong>light/dark mode toggle</strong> 
+        that remembers your preference.</div>
+    </div>
+    <div class="feature-item">
+      <div class="fi-title">⚡ Interaction Layer (script.js)</div>
+      <div class="fi-desc">15 independent features: magnetic buttons, 3D card tilt, 
+        custom cursor, scroll progress bar, typing effect, 
+        <strong>active nav highlighting</strong>, and a <strong>back-to-top button</strong>.</div>
+    </div>
+    <div class="feature-item">
+      <div class="fi-title">🌐 3D Background (main.js)</div>
+      <div class="fi-desc">Three.js scene with floating particles, a wireframe 
+        icosahedron, and a torus knot. They rotate, breathe, and fade out 
+        on scroll — powered by GSAP for silky animation.</div>
+    </div>
+    <div class="feature-item">
+      <div class="fi-title">📊 Data Dashboard</div>
+      <div class="fi-desc">Real Chart.js graphs showing revenue and project metrics. 
+        KPI bars animate in on scroll. Counter numbers count up from zero. 
+        Makes the page feel alive with real data.</div>
+    </div>
+  </div>
+
+  <p class="note" style="margin-top:16px;"><b>Demo moment:</b> Move your mouse over a service card (shows tilt + glare). 
+    Click a button (shows ripple). Hover the nav (shows active state). Scroll down 50% (back-to-top appears).</p>
+</div>
+
+<!-- NEW FEATURES -->
+<div class="section purple">
+  <span class="tag purple">What We Improved · 2:00 – 2:30</span>
+  <h2>Features We Added During the Hackathon <span class="timing">~30 sec</span></h2>
+  <p class="script-text">
+    "Beyond the base project, we shipped <strong>three new features</strong>:<br/><br/>
+    One — <em>Light/Dark mode</em> with localStorage persistence. Your preference is remembered across sessions.<br/><br/>
+    Two — <em>Back-to-top button</em> that smoothly fades in after 400px of scrolling, and vanishes when you're back at the top.<br/><br/>
+    Three — <em>Escape key to close menus</em> — a small but critical accessibility improvement for keyboard-only users.<br/><br/>
+    We also improved <em>active nav highlighting</em> — the nav link for your current section now lights up automatically."
+  </p>
+</div>
+
+<!-- CLOSING -->
+<div class="section">
+  <span class="tag blue">Close · 2:30 – 3:00</span>
+  <h2>Closing Statement <span class="timing">~30 sec</span></h2>
+  <p class="script-text">
+    "Everything you see here is <strong>pure frontend — no frameworks, no build tools, no dependencies 
+    except Three.js and GSAP</strong>. It loads fast, runs smooth, and looks premium.<br/><br/>
+    Our code is clean, commented, and split by responsibility — each team member owns a clear layer. 
+    That's how we shipped this in one hackathon.<br/><br/>
+    <em>We are NirmanLabs. We build things that look impossible — and then we ship them.</em><br/>
+    Thank you."
+  </p>
+  <p class="note"><b>Tip:</b> End with the page scrolled back to the top so the 3D hero is visible during Q&amp;A.</p>
+</div>
+
+<hr class="divider"/>
+
+<!-- QUICK REFERENCE -->
+<div style="margin-top:8px;">
+  <h2 style="color:#fff; margin-bottom:20px; font-size:1rem; text-transform:uppercase; letter-spacing:0.08em; color:var(--muted);">
+    Quick Q&amp;A Reference — if judges ask
+  </h2>
+  <div class="feature-grid">
+    <div class="feature-item">
+      <div class="fi-title">"Why Three.js and not a video background?"</div>
+      <div class="fi-desc">Video files are heavy (5–20MB). Our 3D canvas is ~0 bytes of assets — 
+        everything is generated in JavaScript at runtime. It also responds to mouse and scroll.</div>
+    </div>
+    <div class="feature-item">
+      <div class="fi-title">"How is this different from a template?"</div>
+      <div class="fi-desc">Every pixel is hand-coded. No Bootstrap, no Tailwind, no page builders. 
+        Pure CSS variables, custom grid, and original JavaScript features.</div>
+    </div>
+    <div class="feature-item">
+      <div class="fi-title">"What's the performance like?"</div>
+      <div class="fi-desc">We cap pixel ratio at 2×, use requestAnimationFrame for all animations, 
+        passive scroll listeners, and IntersectionObserver instead of scroll event spam.</div>
+    </div>
+    <div class="feature-item">
+      <div class="fi-title">"Is it accessible?"</div>
+      <div class="fi-desc">Yes — ARIA labels on interactive elements, Escape key for menus, 
+        prefers-reduced-motion support that disables all animations for users who need it.</div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
