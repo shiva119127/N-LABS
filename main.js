@@ -8,6 +8,10 @@
  * 
  * Uses Direct CDN Imports for reliability.
  */
+
+// JS bhi mene likh h 
+// mene kon akshar
+
 console.log('Main.js Initial Design Loaded');
 
 // Direct CDN Imports
